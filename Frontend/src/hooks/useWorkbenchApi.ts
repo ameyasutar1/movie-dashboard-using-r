@@ -122,7 +122,6 @@ export function useCompareData(type: TalentType, names: string[]) {
   return useQuery<CompareResponse>({
     queryKey: ["workbench-api", "compare", type, names],
     enabled: names.length > 0,
-    placeholderData: (previousData) => previousData,
     queryFn: async () => {
       const response = await fetchJson<CompareResponse>("/api/compare", {
         type,

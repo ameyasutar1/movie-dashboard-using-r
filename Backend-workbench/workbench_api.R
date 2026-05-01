@@ -68,15 +68,19 @@ parse_query_string <- function(query_string) {
   parts <- strsplit(query_string, "&", fixed = TRUE)[[1]]
   output <- list()
 
+  decode_query_component <- function(value) {
+    utils::URLdecode(gsub("+", " ", value, fixed = TRUE))
+  }
+
   for (part in parts) {
     if (!nzchar(part)) {
       next
     }
 
     key_value <- strsplit(part, "=", fixed = TRUE)[[1]]
-    key <- utils::URLdecode(key_value[1])
+    key <- decode_query_component(key_value[1])
     value <- if (length(key_value) > 1) {
-      utils::URLdecode(paste(key_value[-1], collapse = "="))
+      decode_query_component(paste(key_value[-1], collapse = "="))
     } else {
       ""
     }

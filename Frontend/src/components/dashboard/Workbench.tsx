@@ -695,6 +695,11 @@ function ComparePanel() {
             <Legend wrapperStyle={{ fontSize: 12, color: INK }} />
           </RadarChart>
         </ResponsiveContainer>
+        {compareQuery.isFetching ? (
+          <p className="mt-3 text-sm text-muted-foreground">
+            Updating comparison…
+          </p>
+        ) : null}
         {compareQuery.error && !compare ? (
           <p className="mt-3 text-sm text-destructive">
             {(compareQuery.error as Error).message}
