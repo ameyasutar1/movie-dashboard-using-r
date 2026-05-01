@@ -1,1 +1,3 @@
 Rscript Backend-workbench/server.R
+cd Frontend
+npm run dev
