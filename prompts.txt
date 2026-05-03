@@ -1,0 +1,23 @@
+PROMPT SUMMARY FOR PPT
+
+BACKEND / CODEX PROMPTS
+
+1. Understand the existing Bollywood movie workbench from the attached zip project and study how the frontend displays different plots over the dataset.
+
+2. Build a REST API in R so that the workbench functionality can be served from a backend for a React frontend.
+
+3. Update the frontend code in the `Frontend` folder so the workbench uses the new R API instead of the old CSV-based local data flow.
+
+4. Debug compare mode by checking whether the issue was in the frontend or backend, and investigate why selected actors were not appearing correctly in the comparison graph.
+
+5. Summarize all instructions given during the project and format them in `prompts.txt` so they can be shared with professors in a PPT-friendly way.
+
+FRONTEND / LOVABLE.DEV PROMPTS
+
+1. Use the uploaded files `BollywoodActorRanking.csv`, `BollywoodDirectorRanking.csv`, `BollywoodMovieDetail.csv`, and `bollywood_dashboard.html` to build a user-facing analysis dashboard.
+
+2. Create an online dashboard in React with interactive features such as dropdowns, useful graphs, and tables to support analysis, while being as creative as possible in the design.
+
+3. Follow a Consulting-style visual direction with navy and white colors, serif headlines, and an austere professional layout.
+
+4. Make the dashboard storytelling-driven, with scrollytelling around 5 key insights plus a separate free-explore section, and prepare the site information for publishing.
